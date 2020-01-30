@@ -1,0 +1,118 @@
+"Window" : {
+    orientationModes :[
+        Ti.UI.PORTRAIT
+    ]
+}
+
+"#form" : {
+	top : 12,
+	right : 12,
+	height : Ti.UI.SIZE,
+	left : 12,
+	bottom : 12,
+	layout : "vertical"
+}
+
+"#contentWrapper" : {
+	layout : "vertical",
+	left : 20,
+	right : 20,
+	// top : 20,
+	height : Ti.UI.SIZE
+}
+
+"#myView":{
+	top: 0
+}
+
+"View": {
+    height: Ti.UI.SIZE,
+    width: Ti.UI.FULL
+}
+
+"ScrollView" :{
+	backgroundColor: "transparent",
+	showVerticalScrollIndicator : true,
+	showHorizontalScrollIndicator : false,
+	width : Ti.UI.FULL,
+	top: 0,
+	bottom: 0
+}
+
+"#mainView": {
+	left: 0,
+	right: 0,
+	opacity: 1,
+	height: Ti.UI.SIZE,
+	top: 0
+}
+
+"Label" : {
+    textAlign: "left",
+    font: {
+
+        fontSize: 16
+    },
+    top: 0,
+    height: Ti.UI.SIZE
+}
+
+".title" : {
+    font: {
+
+	    fontSize: 30,
+    },
+    width: Ti.UI.FULL,
+	height: Ti.UI.SIZE,
+	textAlign: "center",
+	top: 40,
+	bottom: 20
+}
+
+".subtitle" : {
+    font: {
+
+	    fontSize: 21,
+    },
+    width: Ti.UI.FULL,
+	height: Ti.UI.SIZE,
+	textAlign: "center",
+	bottom: 20
+}
+
+".iconImage": {
+    width: 100,
+    height: Ti.UI.SIZE,
+    bottom: 20
+}
+
+// ".helpButton" : {
+// 	text: Alloy.Globals.ICONFONTS.HELPCIRCLE,
+// 	font: {
+//         fontSize: 20,
+// 	    fontFamily: "LemonaidApp"
+//     },
+// 	color: Alloy.Globals.COLORS.HOTCORAL,
+// 	left: 5,
+//     top: 2
+// }
+
+// ".sectionSeparator": {
+//     backgroundColor : Alloy.Globals.COLORS.GREYIV,
+//     height : 1,
+//     touchEnabled : false,
+//     enabled : false,
+//     bottom: 20
+// }
+
+// ".checkoutSectionTitle": {
+//     font: {
+//         fontFamily : Alloy.Globals.FONTS.BOLD
+//     },
+//     width: Ti.UI.FULL,
+//     height: Ti.UI.SIZE,
+//     left : 0,
+//     top: 0,
+//     bottom: 10,
+//     color: Alloy.Globals.UICOLORS.CHECKOUTSUMMARY_SECTIONTITLE_COLOR
+// }

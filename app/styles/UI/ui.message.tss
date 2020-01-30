@@ -1,0 +1,87 @@
+"#messageWrapper" : {
+	height: Ti.UI.SIZE,
+	width: Ti.UI.FULL,
+	layout: "vertical",
+	backgroundColor: "transparent",
+	left: 12,
+	right: 12
+}
+
+"#rowWrapperTop": {
+	height: Ti.UI.SIZE,
+	width: Ti.UI.FULL,
+	left: 5,
+	right: 5,
+	top: 20,
+	bottom: 10
+}
+
+"#rowWrapperBottom": {
+	height: Ti.UI.SIZE,
+	width: Ti.UI.FULL,
+	left: 0,
+	right: 0,
+	top: 10,
+	bottom: 10,
+	layout: "vertical"
+}
+
+".messageLabel": {
+	font: {
+		fontSize: 18
+	},
+	left: 10,
+	right: 10,
+	bottom: 10,
+	backgroundColor: "transparent",
+	autoLink: Titanium.UI.AUTOLINK_NONE,
+	bubbles: false,
+	color: "black"
+}
+
+".doctorWrapper": {
+	layout: "horizontal",
+	left: 0,
+	right: 0,
+	bottom: 10,
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+}
+
+".doctorImage": {
+	width: 40,
+	height: 40,
+	borderRadius: 20,
+	left: 0
+}
+
+".doctorTitle": {
+	align: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	left: 10,
+	top: 7
+}
+
+".youLabel": {
+	left: 0,
+	font: {
+		fontSize: 14
+	},
+	right: 20,
+	top: 7
+}
+
+".date": {
+	font: {
+		fontSize: 13
+	},
+	right: 0,
+	top: 10
+}
+
+
+".separator": {
+    backgroundColor : "grey",
+    height : 1,
+    touchEnabled : false,
+    enabled : false
+}

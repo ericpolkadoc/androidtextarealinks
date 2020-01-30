@@ -1,0 +1,50 @@
+<Alloy>
+	<Model src="Message" instance="true" id="messageModel"/>
+	<View class="messageWrapper" id="messageWrapper">
+		<View id="rowWrapperTop">
+			<View 
+				id="doctorWrapper" 
+				class="doctorWrapper"
+				height="{$.messageModel.doctorWrapperHeight}"
+				opacity="{$.messageModel.doctorWrapperOpacity}"
+				>
+				<ImageView 
+					id="doctorImage" 
+					class="doctorImage"
+					image="{$.messageModel.doctorImage}"
+					/>
+				<Label 
+					class="doctorTitle"
+					text="{$.messageModel.doctorTitle}"/>
+			</View>
+			<Label 
+				class="youLabel" 
+				text="{$.messageModel.youLabel}"
+				height="{$.messageModel.youLabelHeight}"
+				opacity="{$.messageModel.youLabelOpacity}"
+				/>
+			<Label 
+				class="date" 
+				text="{$.messageModel.messageDate}"
+				/>
+		</View>
+		<View id="rowWrapperBottom">
+			<TextArea 
+				id="messageLabel"
+				value="{$.messageModel.content}"
+				class="messageLabel" 
+				width="Ti.UI.FULL" 
+				height="Ti.UI.SIZE"
+				left="0"
+				right="0"
+				editable="false"
+				scrollable="false"
+				bubbles="false"
+				autoLink="Titanium.UI.AUTOLINK_NONE"
+				handleLinks="false"
+				attributedString="{$.messageModel.attributedString}"
+				/>
+		</View>
+		<View class="separator"/>
+	</View>
+</Alloy>

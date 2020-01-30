@@ -1,0 +1,15 @@
+"#myView": {
+
+}
+
+
+
+
+".separator": {
+    backgroundColor : Alloy.Globals.COLORS.GREYIV,
+    height : 1,
+    touchEnabled : false,
+    enabled : false,
+    bottom: 20
+}
+

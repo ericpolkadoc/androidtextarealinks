@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		<Button id="message" onClick="doClick">No Require</Button>
+		<Button id="message2" onClick="doClick">With Require</Button>
+	</Window>
+</Alloy>
