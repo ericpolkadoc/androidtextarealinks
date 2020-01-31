@@ -14,7 +14,17 @@ function doClick(e)
 	}
 
 	var c = Alloy.createController(screen).getView();
-	c.open();
+	
+	if(OS_IOS)
+	{
+		c.open({
+			modal: true
+		});
+	}
+	else
+	{
+		c.open();
+	}
 
 }
 

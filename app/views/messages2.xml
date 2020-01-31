@@ -1,8 +1,9 @@
 <Alloy>
 	<Collection src="Messages" instance="true" id="messagesCollection"/>
 	<Model src="Messages" instance="true" id="messagesModel"/>
-	<Window>
-		<View id="myView">
+	<Window  backgroundColor="white">
+		<View id="myView" layout="vertical">
+		<Button title="close" right="0" top="50" onClick="closeWindow"/>
 			<ScrollView
 				id="messagesListView"
 				layout="vertical"
@@ -15,6 +16,8 @@
 					class="messageList"
 					layout="vertical"
 					dataCollection="$.messagesCollection"
+					height="Ti.UI.SIZE"
+					width="Ti.UI.FULL"
 					>
 					<Require src="UI/ui.message"
 						mid="{id}"

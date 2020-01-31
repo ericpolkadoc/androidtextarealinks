@@ -92,22 +92,30 @@ var f = {
 				"attributedString": message.attributedString
 			})
 
+			$.messageLabel.addEventListener("link", f.checkURLMap);
+
+			console.log(JSON.stringify($.messageModel))
+
+			$.messageLabel.font = {
+				fontSize: 22
+			}
+
 		}
 	},
 
 	checkURLMap: function(e)
 	{
-		LOG("checkurlmap")
+		console.log("checkurlmap")
 
 		var res = _.find(Alloy.Globals.webURLMap, function(service){
 			return service.url == e.url
 		})
 
-		LOG("res", res)
+		console.log("res", JSON.stringify(res))
 
-		if(!APP.UTILS.isEmpty(res))
+		if(!_.isEmpty(res))
 		{
-			// this is an internal link
+			console.log("this is an internal link")
 		}
 		else
 		{
@@ -119,3 +127,12 @@ var f = {
 f.buildMessage(args);
 
 
+function doOnClick(e)
+{
+	console.log(e.source)
+}
+
+function doOnLink(e)
+{
+	console.log(e.source)
+}

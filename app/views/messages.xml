@@ -1,5 +1,6 @@
 <Alloy>
-	<Window>
+	<Window backgroundColor="white" layout="vertical">
+		<Button title="close" right="0" top="50" onClick="closeWindow"/>
 		<View id="myView">
 			
 		</View>

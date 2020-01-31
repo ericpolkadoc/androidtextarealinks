@@ -2,7 +2,10 @@
 
 }
 
-
+".messagesListView" : {
+  bottom: 0,
+  top: 0
+}
 
 
 ".separator": {

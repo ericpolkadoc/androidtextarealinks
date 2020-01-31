@@ -2,17 +2,19 @@ var sv = Ti.UI.createScrollView({
 	id: "messagesListView",
 	layout: "vertical",
 	width: Ti.UI.FULL,
-	height: Ti.UI.FULL,
-	scrollType: "vertical"
+	height: 800,
+	scrollType: "vertical",
 })
 
 var child = Ti.UI.createView({
-	layout: "vertical"
+	layout: "vertical",
+	width: Ti.UI.FULL,
+	height: Ti.UI.SIZE
 })
 
-for(var i = 0; i < 5; i++)
+for(var i = 0; i < 8; i++)
 {
-	var str = "this is an link to something http://www.google.com and and https://wwww.yahoo.com or internal links https://www.test.com/thislinkwillbeinternal."
+	var str = "this is an link to something http://www.google.com \n\n and and https://wwww.yahoo.com \n\n or internal links https://www.test.com/thislinkwillbeinternal and should console log."
 
 	// find all the http instances
 	var re = /http/g;
@@ -55,26 +57,30 @@ for(var i = 0; i < 5; i++)
 		font: {
 			fontSize: 18
 		},
+		color: "black",
 		left: 20,
 		right: 20,
 		top : 20,
+		bottom: 20,
 		width : Ti.UI.FULL, 
 		height : Ti.UI.SIZE,
 		autoLink: Titanium.UI.AUTOLINK_NONE,
 		editable: false,
-		attributedString: attr,
-		scrollable: false,
-		bubbles: false
+		scrollable: false
 	});
+	
+	textarea.attributedString = attr;
 
 	textarea.addEventListener('link', function(e){
 
 		console.log(e.url)
 
 		// internal route map
-		var res = _.find(Alloy.Globals.webURLMap, function(service){
+		var res = _.filter(Alloy.Globals.webURLMap, function(service){
 			return service.url == e.url
 		})
+
+		console.log("res " + JSON.stringify(res))
 
 		if(!_.isEmpty(res))
 		{
@@ -89,10 +95,20 @@ for(var i = 0; i < 5; i++)
 	});
 
 	child.add(textarea);
-
+	child.add(Ti.UI.createView({
+		width: Ti.UI.FULL,
+		height: 1,
+		backgroundColor: "black",
+		bottom: 0
+	}))
 }
 
 sv.add(child)
 
 $.myView.add(sv)
 
+function closeWindow()
+{
+    console.log("close")
+    $.messages.close();
+}
